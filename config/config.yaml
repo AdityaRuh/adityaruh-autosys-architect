@@ -1,0 +1,45 @@
+# Hermes configuration for AutoSys Architect.
+# This file contains NON-SECRET settings only. Secrets belong in .env
+# (see env.example for the required variables).
+#
+# After install, Hermes will load this from
+#   ~/.hermes/profiles/autosys-architect/config.yaml
+# and merge it onto its global defaults.
+
+model:
+  default: anthropic/claude-opus-4-7
+
+terminal:
+  backend: docker
+  docker_image: ghcr.io/hermes-agents/base:latest
+  container_cpu: 1
+  container_memory: 5120
+  container_persistent: false
+
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+
+curator:
+  enabled: true
+  interval_hours: 168
+  min_idle_hours: 2
+  stale_after_days: 30
+  archive_after_days: 90
+
+delegation:
+  max_concurrent_children: 3
+  max_spawn_depth: 1
+  orchestrator_enabled: true
+
+approvals:
+  mode: smart
+
+display:
+  personality: concise-architect
+  show_reasoning: false
+
+streaming:
+  mode: partial

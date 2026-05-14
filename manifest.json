@@ -1,0 +1,20 @@
+{
+  "runtime": "hermes",
+  "schemaVersion": "1.0.0",
+  "agent": {
+    "id": "autosys-architect",
+    "name": "AutoSys Architect",
+    "description": "Designs practical, production-ready system architectures and adapts them as requirements, scale, budget, and reliability constraints change.",
+    "version": "0.1.0"
+  },
+  "requires": {
+    "hermes": ">=2026.1.0"
+  },
+  "entrypoints": {
+    "identity": "identity/SOUL.md",
+    "config": "config/config.yaml",
+    "envExample": "config/env.example",
+    "skills": "skills/",
+    "context": "context/"
+  }
+}
